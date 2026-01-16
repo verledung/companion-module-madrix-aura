@@ -39,12 +39,8 @@ All notable changes to the MADRIX Aura Companion Module will be documented in th
 
 ## Planned Features (Future Releases)
 
-- [ ] Additional master faders
-- [ ] Custom command support
-- [ ] Multi-device control
-- [ ] Advanced scheduling options
-- [ ] Feedback variables
-- [ ] Scene templates
+- [ ] Adding Feedback (MADRIX Aura doesnt support it yet..)
+
 
 ---
 
