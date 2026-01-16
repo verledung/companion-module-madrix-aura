@@ -247,9 +247,9 @@ Contact: kontakt@verledung.com
 
 This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
 
-**MADRIX® is a registered trademark of inoage GmbH.**
-
 ---
+
+**MADRIX® is a registered trademark of inoage GmbH.**
 
 **inoage GmbH**  
 Wiener Straße 56  
