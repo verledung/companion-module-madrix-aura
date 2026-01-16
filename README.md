@@ -49,6 +49,10 @@ For issues, questions, or feature requests, please contact:
 - **verLEDung - LED- & Veranstaltungstechnik**
 - Email: info@verledung.com
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
+
 ## License
 
 MIT License - See LICENSE file for details

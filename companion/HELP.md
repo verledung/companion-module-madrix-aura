@@ -234,6 +234,12 @@ All commands are sent via HTTP GET requests to: `http://[IP]/remote.cgi?[command
 - MADRIX Aura 12
 - MADRIX Aura 32
 
+## Version & Changelog
+
+**Current Version: 1.0.0** (Released: 2026-01-16)
+
+For detailed version history and planned features, see the [CHANGELOG](../CHANGELOG.md).
+
 ---
 
 ## Disclaimer
@@ -246,9 +252,9 @@ Impressum: https://verledung.com/impressum
 **You need MADRIX installations or programming?**  
 Contact: kontakt@verledung.com
 
-This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
-
 ---
+
+This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
 
 **MADRIX® is a registered trademark of inoage GmbH.**
 
