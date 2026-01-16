@@ -240,6 +240,8 @@ All commands are sent via HTTP GET requests to: `http://[IP]/remote.cgi?[command
 
 Made with ❤ by **verLEDung - LED- & Veranstaltungstechnik**
 
+Website: https://verledung.com
+
 This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
 
 **MADRIX® is a registered trademark of inoage GmbH.**

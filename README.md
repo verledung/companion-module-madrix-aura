@@ -59,6 +59,8 @@ MIT License - See LICENSE file for details
 
 Made with ❤ by **verLEDung - LED- & Veranstaltungstechnik**
 
+Website: https://verledung.com
+
 This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
 
 **MADRIX® is a registered trademark of inoage GmbH.**
