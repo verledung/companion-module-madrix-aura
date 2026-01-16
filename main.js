@@ -309,7 +309,12 @@ class ModuleInstance extends InstanceBase {
 	sendCommand(command, value) {
 		return new Promise((resolve, reject) => {
 			const http = require('http')
-			const host = this.config.host
+			let host = this.config.host.trim()
+
+			// Remove http:// or https:// prefix if present
+			host = host.replace(/^https?:\/\//, '')
+			// Remove trailing slashes
+			host = host.replace(/\/$/, '')
 
 			let url = `http://${host}/remote.cgi?${command}`
 			if (value !== undefined) {
