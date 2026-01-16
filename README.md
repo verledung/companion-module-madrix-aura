@@ -59,7 +59,8 @@ MIT License - See LICENSE file for details
 
 Made with ❤ by **verLEDung - LED- & Veranstaltungstechnik**
 
-Website: https://verledung.com
+Website: https://verledung.com  
+Impressum: https://verledung.com/impressum
 
 **You need MADRIX LED installations or programming?**  
 Contact: kontakt@verledung.com

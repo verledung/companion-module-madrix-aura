@@ -240,7 +240,8 @@ All commands are sent via HTTP GET requests to: `http://[IP]/remote.cgi?[command
 
 Made with ❤ by **verLEDung - LED- & Veranstaltungstechnik**
 
-Website: https://verledung.com
+Website: https://verledung.com  
+Impressum: https://verledung.com/impressum
 
 **You need MADRIX installations or programming?**  
 Contact: kontakt@verledung.com
