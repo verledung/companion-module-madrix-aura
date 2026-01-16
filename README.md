@@ -62,12 +62,12 @@ Made with ❤ by **verLEDung - LED- & Veranstaltungstechnik**
 Website: https://verledung.com  
 Impressum: https://verledung.com/impressum
 
-**You need MADRIX LED installations or programming?**  
+**You need MADRIX installations or programming?**  
 Contact: kontakt@verledung.com
 
-This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
-
 ---
+
+This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
 
 **MADRIX® is a registered trademark of inoage GmbH.**
 
@@ -78,7 +78,3 @@ Phone: +49 351 862 6869 0
 E-mail: info@madrix.com  
 
 Copyright © 2001 – 2025 inoage GmbH | All rights reserved.
-
-## Acknowledgments
-
-This module was developed for controlling MADRIX Aura lighting controllers in professional event and lighting setups.
