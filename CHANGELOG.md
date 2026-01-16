@@ -47,4 +47,11 @@ All notable changes to the MADRIX Aura Companion Module will be documented in th
 For the latest updates and source code, visit:
 **Repository:** https://github.com/verledung/companion-module-madrix-aura
 
-Made with ❤ by **verLEDung**
+Made with ❤ by **verLEDung - LED- & Veranstaltungstechnik**
+
+Website: https://verledung.com  
+Impressum: https://verledung.com/impressum
+
+**You need MADRIX installations or programming?**  
+Contact: kontakt@verledung.com
+
