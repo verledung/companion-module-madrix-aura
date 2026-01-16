@@ -20,7 +20,7 @@
   "runtime": {
     "type": "node22",
     "api": "nodejs-ipc",
-    "apiVersion": "1.14.1",
+    "apiVersion": "1.12.1",
     "entrypoint": "../main.js"
   }
 }

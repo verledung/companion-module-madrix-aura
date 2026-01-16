@@ -15,7 +15,7 @@
   "author": "verLEDung - LED- & Veranstaltungstechnik",
   "license": "MIT",
   "dependencies": {
-    "@companion-module/base": "^1.14.1"
+    "@companion-module/base": "^1.12.1"
   },
   "devDependencies": {}
 }
