@@ -5,8 +5,8 @@
   "description": "Control MADRIX Aura 2/8/12/32 via HTTP Control Commands",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "git+https://github.com/bitfocus/companion-module-madrix-aura.git",
-  "bugs": "https://github.com/bitfocus/companion-module-madrix-aura/issues",
+  "repository": "git+https://github.com/verledung/companion-module-madrix-aura.git",
+  "bugs": "https://github.com/verledung/companion-module-madrix-aura/issues",
   "maintainers": [
     {
       "name": "verLEDung - LED- & Veranstaltungstechnik",
