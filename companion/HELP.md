@@ -234,4 +234,24 @@ All commands are sent via HTTP GET requests to: `http://[IP]/remote.cgi?[command
 - MADRIX Aura 12
 - MADRIX Aura 32
 
+---
+
+## Disclaimer
+
+Made with ❤ by **verLEDung - LED- & Veranstaltungstechnik**
+
+This module is **not an official product** of inoage GmbH. It is an independent implementation for controlling MADRIX Aura devices via Bitfocus Companion.
+
+**MADRIX® is a registered trademark of inoage GmbH.**
+
+---
+
+**inoage GmbH**  
+Wiener Straße 56  
+01219 Dresden, Germany  
+Phone: +49 351 862 6869 0  
+E-mail: info@madrix.com  
+
+Copyright © 2001 – 2025 inoage GmbH | All rights reserved.
+
 
