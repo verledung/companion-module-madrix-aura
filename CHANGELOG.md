@@ -4,17 +4,14 @@ All notable changes to the MADRIX Aura Companion Module will be documented in th
 
 ## [1.0.1] - 2026-01-21
 
-### Added
-- Added .gitattributes for text and EOL settings
-- Added .prettierignore to exclude package.json and LICENSE.md
-- Added GitHub workflow for Companion module checks
-- Added GitHub issue templates (bug report, feature request)
-
 ### Changed
-- Reworked project layout to match official Companion JS template (src/ structure, manifest entrypoint)
-- Added yarn 4 tooling, dev dependencies (@companion-module/tools, prettier) and package scripts
-- Introduced .gitignore/.yarnrc.yml and generated yarn.lock; removed npm lockfile and vendored node_modules from repo scope
-- Simplified devDependencies to match official template
+- Use plain Node HTTP/HTTPS requests (Connection: close, identity encoding) to match Aura expectations
+- Accept 2xx–4xx responses as success for Aura endpoints; reserve failures for 5xx/network errors
+- Keep last command/status variables updated from the raw Aura response status
+
+### Fixed
+- Record action now toggles properly: sends `stop` when recording is active
+- Clearing recording state when a stop command completes
 
 ---
 
@@ -49,7 +46,7 @@ All notable changes to the MADRIX Aura Companion Module will be documented in th
 
 | Version | Release Date | Notes |
 |---------|-------------|-------|
-| 1.0.1 | 2026-01-21 | Template alignment, tooling cleanup |
+| 1.0.1 | 2026-01-21 | HTTP handling fixes; record toggle |
 | 1.0.0 | 2026-01-16 | Initial release |
 
 ---

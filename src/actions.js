@@ -202,7 +202,13 @@ function getActionDefinitions(instance) {
     description: 'Start/stop recording',
     options: [],
     callback: async () => {
-      await instance.sendCommand('record')
+      if (instance.recordingActive) {
+        await instance.sendCommand('stop')
+        instance.recordingActive = false
+      } else {
+        await instance.sendCommand('record')
+        instance.recordingActive = true
+      }
     },
   }
 

@@ -236,7 +236,7 @@ All commands are sent via HTTP GET requests to: `http://[IP]/remote.cgi?[command
 
 ## Version & Changelog
 
-**Current Version: 1.0.0** (Released: 2026-01-16)
+**Current Version: 1.0.1** (Released: 2026-01-21)
 
 For detailed version history and planned features, see the [CHANGELOG](../CHANGELOG.md).
 

@@ -1,3 +1,5 @@
+const http = require('http')
+const https = require('https')
 const { InstanceBase, InstanceStatus, runEntrypoint } = require('@companion-module/base')
 const { getConfigFields } = require('./config')
 const { getActionDefinitions } = require('./actions')
@@ -8,6 +10,7 @@ class ModuleInstance extends InstanceBase {
   constructor(internal) {
     super(internal)
     this.playbackState = null
+    this.recordingActive = false
   }
 
   async init(config) {
@@ -45,37 +48,63 @@ class ModuleInstance extends InstanceBase {
     }
 
     let host = this.config.host.trim()
-    host = host.replace(/^https?:\/\//, '').replace(/\/+$/, '')
-
     if (!host) {
       throw new Error('Host is not configured')
     }
 
+    // Keep existing protocol if given; otherwise assume http for the actual request
+    const hasProtocol = /^https?:\/\//i.test(host)
+    const base = host.replace(/\/+$/, '')
+
     const query = value !== undefined ? `${command}=${value}` : command
-    const url = `http://${host}/remote.cgi?${query}`
+    const fetchUrl = hasProtocol ? `${base}/remote.cgi?${query}` : `http://${base}/remote.cgi?${query}`
+    const logUrl = hasProtocol ? fetchUrl : `${base}/remote.cgi?${query}`
 
-    this.log('debug', `Sending command: ${url}`)
+    this.log('debug', `Sending command: ${logUrl}`)
 
-    try {
-      const response = await fetch(url, {
+    // Use plain Node request (closer to curl/PowerShell) to match Aura's expected behavior
+    const client = fetchUrl.startsWith('https://') ? https : http
+
+    await new Promise((resolve, reject) => {
+      const req = client.request(fetchUrl, {
         method: 'GET',
         headers: {
-          'User-Agent': 'Companion-Module/1.0',
+          Accept: '*/*',
+          'Accept-Encoding': 'identity',
+          Connection: 'close',
         },
       })
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} ${response.statusText}`)
-      }
+      req.on('response', (res) => {
+        let body = ''
+        res.setEncoding('utf8')
+        res.on('data', (chunk) => {
+          body += chunk
+        })
 
-      updateVariableValues(this, {
-        last_command: query,
-        last_status: `HTTP ${response.status}`,
+        res.on('end', () => {
+          const statusOk = res.statusCode && res.statusCode >= 200 && res.statusCode < 500
+          if (statusOk) {
+            if (command === 'stop') {
+              this.recordingActive = false
+            }
+            updateVariableValues(this, {
+              last_command: query,
+              last_status: `HTTP ${res.statusCode}`,
+            })
+            resolve()
+          } else {
+            reject(new Error(`HTTP ${res.statusCode} ${res.statusMessage || ''}${body ? ` - ${body}` : ''}`))
+          }
+        })
       })
-    } catch (error) {
-      this.log('error', `Failed to send command: ${error.message}`)
-      throw error
-    }
+
+      req.on('error', (err) => {
+        reject(err)
+      })
+
+      req.end()
+    })
   }
 }
 
